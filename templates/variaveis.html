@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block centro_pagina %}
+
+<h1>Exibindo variaveis</h1>
+
+<p>Duas chaves exibe a variavel nome: {{nome}}</p>
+<p>Podemos fazer contas simples ao exibir a variavel: {{2026 - idade}}</p>
+
+<br><br>
+
+{% if idade>= 18 %}
+  <div class="alert alert-success" role="alert">
+    Parabéns {{nomea}}, você pode entrar!
+  </div>
+
+
+{% else %}
+  <div class="alert alert-danger" role="alert">
+    Desculpe {{nome}}, você ainda é menor!
+  </div>
+
+{% endif %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script src="{ {url_for('static', filename='js/script.js') }}"></script>
+
+  {% endblock %}
